@@ -25,8 +25,12 @@ def convert_images(input_folder, output_folder):
             # 构建输出文件的路径
             output_file_path = os.path.join(output_folder, file[:-4] + ".jpg")
             
-            # 构建命令行命令
-            command = f"python 001-image_png2jpg.py {input_file_path} {output_file_path}"
+            # 获取脚本所在的目录
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            # 构建完整路径
+            script_path = os.path.join(script_dir, "001-image_png2jpg.py")
+            # 使用完整路径调用脚本
+            command = f"python {script_path} {input_file_path} {output_file_path}"
             
             # 执行命令行命令
             subprocess.call(command, shell=True)
