@@ -26,8 +26,8 @@
 
 使用以下命令从命令行运行程序：
 
-* 处理单张图片：`python 003-image_format_conversion.py -i /path/from/file -o /path/to/file -f jpg`
-* 处理文件夹下的所有图片：`python 003a-image_format_conversion_batch.py /path/from/folder /path/to/folder -f png`
+* 处理单张图片：`python 001-image_png2jpg.py /path/from/file /path/to/file`
+* 处理文件夹下的所有图片：`python 001a-image_png2jpg_batch.py /path/from/folder /path/to/folder`
 
 ⚠️ 注意：`001a-image_png2jpg_batch.py` 依赖于名为 `001-image_png2jpg.py` 的 Python 脚本来实际执行图片格式转换操作，请确保它们处于同一文件夹下。
 
@@ -57,8 +57,8 @@
 
 使用以下命令从命令行运行程序：
 
-处理单张图片：`python 002-image_compress.py -i /path/from/file -o /path/to/file -s 1024 -q 80`
-处理文件夹下的所有图片：`python 002a-image_compress_batch.py /path/from/folder /path/to/folder -s 1024 -q 80`
+* 处理单张图片：`python 002-image_compress.py -i /path/from/file -o /path/to/file -s 1024 -q 80`
+* 处理文件夹下的所有图片：`python 002a-image_compress_batch.py /path/from/folder /path/to/folder -s 1024 -q 80`
 
 其中：
 
