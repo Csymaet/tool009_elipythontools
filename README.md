@@ -1,74 +1,76 @@
 # tool009_elipythontools
 
-## 001a-批量转换png为jpg格式
+[中文](./README.zh.md)|English
 
-这是一个基于 Python 的批量转换图片格式程序，它可以将指定文件夹中的所有png图片转换为jpg，并保存到指定的输出目录。
+## 001a-Batch Convert PNG to JPG Format
 
-### 功能特性
+This is a Python-based program for batch converting image formats. It can convert all PNG images in the specified folder to JPG format and save them to the specified output directory.
 
-* 支持将指定文件夹中的所有图片进行批量格式转换。
-* 可以设置转换后的图片格式。
-* 输出目录可以自定义，如果未指定，则默认为输入文件夹的父目录。
+### Features
 
-### 安装依赖
+* Supports batch format conversion of all images in the specified folder.
+* Allows you to set the format of the converted images.
+* The output directory can be customized. If not specified, it defaults to the parent directory of the input folder.
 
-在运行该程序之前，请先确保你已经安装了 Python 3 和以下依赖：
+### Dependencies
 
-`pillow`
-
-* 你可以使用以下命令安装依赖：
-`pip install pillow`
-
-* 如果使用的 Linux 发行版是 Arch Linux，可以使用以下命令安装：
-`pacman -S python-pillow`
-
-### 使用方法
-
-使用以下命令从命令行运行程序：
-
-* 处理单张图片：`python 001-image_png2jpg.py /path/from/file /path/to/file`
-* 处理文件夹下的所有图片：`python 001a-image_png2jpg_batch.py /path/from/folder /path/to/folder`
-
-⚠️ 注意：`001a-image_png2jpg_batch.py` 依赖于名为 `001-image_png2jpg.py` 的 Python 脚本来实际执行图片格式转换操作，请确保它们处于同一文件夹下。
-
-## 002a-批量压缩图片程序
-
-这是一个基于 Python 的批量压缩图片程序，它可以自动将指定文件夹中的所有图片文件进行压缩，并保存到指定的输出目录。
-
-### 功能特性
-
-- 支持将指定文件夹中的所有图片进行批量压缩。
-- 可以设置压缩后的最大尺寸和图片质量参数。
-- 输出目录可以自定义，如果未指定，则默认为输入文件夹的父目录。
-
-### 安装依赖
-
-在运行该程序之前，请先确保你已经安装了 Python 3 和以下依赖：
+Before running this program, please make sure you have installed Python 3 and the following dependencies:
 
 `pillow`
 
-* 你可以使用以下命令安装依赖：
+* You can install the dependencies using the following command:
 `pip install pillow`
 
-* 如果使用的linux发行版是ArchLinux，使用以下命令安装：
+* If you are using Arch Linux as your Linux distribution, you can use the following command to install:
 `pacman -S python-pillow`
 
-### 使用方法
+### Usage
 
-使用以下命令从命令行运行程序：
+Use the following command to run the program from the command line:
 
-* 处理单张图片：`python 002-image_compress.py -i /path/from/file -o /path/to/file -s 1024 -q 80`
-* 处理文件夹下的所有图片：`python 002a-image_compress_batch.py /path/from/folder /path/to/folder -s 1024 -q 80`
+* Process a single image: `python 001-image_png2jpg.py /path/from/file /path/to/file`
+* Process all images in a folder: `python 001a-image_png2jpg_batch.py /path/from/folder /path/to/folder`
 
-其中：
+⚠️ Note: `001a-image_png2jpg_batch.py` depends on a Python script named `001-image_png2jpg.py` to perform the actual image format conversion operation. Make sure they are in the same folder.
 
-- `-s` 或 `--size` 参数用于设置压缩后的最大尺寸（默认为 1024）。
-- `-q` 或 `--quality` 参数用于设置图片质量（默认为 30）。
+## 002a-Batch Image Compression Program
 
-如果未指定 `-s` 和 `-q` 参数，程序将使用默认值进行压缩。
+This is a Python-based program for batch compressing images. It can automatically compress all image files in the specified folder and save them to the specified output directory.
 
-⚠️ 注意：`002a-image_compress_batch.py`依赖于名为 `002-image_compress.py` 的 Python 脚本来实际执行图片压缩操作，请确保它们处于同一文件夹下。
+### Features
 
-⚠️ 注意：png格式的图片不支持压缩图片质量，只支持缩小图片尺寸，如果想获得更小的图片存储大小，可以先将png图片转换为jpg格式，再进行压缩处理。
+- Supports batch compression of all images in the specified folder.
+- Allows you to set the maximum size and image quality parameters after compression.
+- The output directory can be customized. If not specified, it defaults to the parent directory of the input folder.
 
-⚠️ 补充说明：以上提供的代码和 README 文件是由 GPT-3.5 模型生成的。请注意，生成的代码和文本是模型基于先前训练的数据和模式生成的，并不保证完全正确或符合实际需求。因此，在使用生成的代码和文本时，请仔细检查和验证，并根据需要进行适当的修改和调整，以确保其适应你的具体情况。
+### Dependencies
+
+Before running this program, please make sure you have installed Python 3 and the following dependencies:
+
+`pillow`
+
+* You can install the dependencies using the following command:
+`pip install pillow`
+
+* If you are using Arch Linux as your Linux distribution, use the following command to install:
+`pacman -S python-pillow`
+
+### Usage
+
+Use the following command to run the program from the command line:
+
+* Process a single image: `python 002-image_compress.py -i /path/from/file -o /path/to/file -s 1024 -q 80`
+* Process all images in a folder: `python 002a-image_compress_batch.py /path/from/folder /path/to/folder -s 1024 -q 80`
+
+Where:
+
+- The `-s` or `--size` parameter is used to set the maximum size after compression (defaults to 1024).
+- The `-q` or `--quality` parameter is used to set the image quality (defaults to 30).
+
+If the `-s` and `-q` parameters are not specified, the program will use the default values for compression.
+
+⚠️ Note: `002a-image_compress_batch.py` depends on a Python script named `002-image_compress.py` to perform the actual image compression operation. Make sure they are in the same folder.
+
+⚠️ Note: PNG images do not support compressing image quality, only reducing image size. If you want to achieve a smaller storage size for PNG images, you can convert them to JPG format first and then perform the compression.
+
+⚠️ Supplementary Note: The code and README file provided above were generated by the GPT-3.5 model. Please note that the generated code and text are based on the data and patterns previously trained by the model, and there is no guarantee that they are completely correct or suitable for your specific needs. Therefore, when using the generated code and text, please carefully check and verify, and make appropriate modifications and adjustments as needed to ensure its suitability for your specific situation.
