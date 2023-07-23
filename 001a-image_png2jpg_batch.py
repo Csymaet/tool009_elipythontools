@@ -26,7 +26,7 @@ def convert_images(input_folder, output_folder):
             output_file_path = os.path.join(output_folder, file[:-4] + ".jpg")
             
             # 构建命令行命令
-            command = f"python image_png2jpg.py {input_file_path} {output_file_path}"
+            command = f"python 001-image_png2jpg.py {input_file_path} {output_file_path}"
             
             # 执行命令行命令
             subprocess.call(command, shell=True)

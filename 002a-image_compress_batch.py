@@ -9,11 +9,11 @@ def compress_folder_images(folder_path, output_folder, max_size, quality):
     # 获取文件夹中所有图片文件的路径
     image_files = [os.path.join(folder_path, file) for file in os.listdir(folder_path) if file.endswith(('.jpg', '.jpeg', '.png'))]
 
-    # 遍历每个图片文件并调用 image_compress.py 进行压缩
+    # 遍历每个图片文件并调用 002-image_compress.py 进行压缩
     for image_file in image_files:
         output_file = os.path.join(output_folder, os.path.basename(image_file))
-        # 调用 image_compress.py 并传递命令行参数
-        command = f"python image_compress.py -i {image_file} -o {output_file} -s {max_size} -q {quality}"
+        # 调用 002-image_compress.py 并传递命令行参数
+        command = f"python 002-image_compress.py -i {image_file} -o {output_file} -s {max_size} -q {quality}"
         subprocess.call(command, shell=True)
 
 # 解析命令行参数
